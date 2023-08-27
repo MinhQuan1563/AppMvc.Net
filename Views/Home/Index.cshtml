@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var thongbao = TempData["StatusMessage"] as string;
+}
+
+@await Html.PartialAsync("_AlertMessage", thongbao)
+
+<div class="text-center">
+    <h1 class="display-4">Xin chao</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

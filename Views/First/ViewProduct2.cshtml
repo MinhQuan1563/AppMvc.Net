@@ -1,0 +1,16 @@
+﻿@{
+    var product = ViewData["products"] as ProductModel;
+}
+
+@if(product != null)
+{
+    <p class="badge bg-info">Su dung ViewData de the hien Product</p>
+    <div class="card bg-success text-white">
+        <h1 class="card-header">@product.Name</h1>
+        <div class="card-body">
+            <p class="card-text">
+                Gia: @product.Price
+            </p>
+        </div>
+    </div>
+}

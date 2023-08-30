@@ -245,6 +245,38 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Earth.jpg",
+      "PackagePath": "staticwebassets\\planet\\Earth.jpg"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Jupiter.jpg",
+      "PackagePath": "staticwebassets\\planet\\Jupiter.jpg"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Mars.jpg",
+      "PackagePath": "staticwebassets\\planet\\Mars.jpg"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Mercury.jpg",
+      "PackagePath": "staticwebassets\\planet\\Mercury.jpg"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Neptune.jpg",
+      "PackagePath": "staticwebassets\\planet\\Neptune.jpg"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Saturn.jpg",
+      "PackagePath": "staticwebassets\\planet\\Saturn.jpg"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Uranus.jpg",
+      "PackagePath": "staticwebassets\\planet\\Uranus.jpg"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Venus.jpg",
+      "PackagePath": "staticwebassets\\planet\\Venus.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AppMvc.Net.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

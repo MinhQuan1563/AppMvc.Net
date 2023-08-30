@@ -1,6 +1,14 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
     var thongbao = TempData["StatusMessage"] as string;
+
+    //Url.Action()
+    //Url.ActionLink()
+
+    //Url.RouteUrl()
+    //Url.Link()
+
+    // <a> <button> <form>
 }
 
 @await Html.PartialAsync("_AlertMessage", thongbao)
@@ -9,3 +17,70 @@
     <h1 class="display-4">Xin chao</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@*
+<p>
+    Địa chỉ đầy đủ --> <strong>@Url.ActionLink()</strong>
+</p>
+
+<p>
+    Địa chỉ sau localhost --> <strong>@Url.Action()</strong>
+</p>
+
+<p>
+    Địa chỉ sau tới Privacy --> <strong>@Url.Action("Privacy")</strong>
+</p>
+
+<p>
+    Địa chỉ sau tới Privacy có tham số (id, name) --> <strong>@Url.Action("Privacy", new {id = 123, name = "DoMinhQuan"})</strong>
+</p>
+
+<p>
+    Địa chỉ sau tới Jupiter cua controller Planet --> <strong>@Url.Action("Jupiter", "Planet")</strong>
+</p>
+
+<p>
+    Địa chỉ sau tới PlaneInfo --> <strong>@Url.Action("PlaneInfo", "Planet", new {id = 3})</strong>
+</p>
+
+<p>
+    Địa chỉ sau tới  --> <strong>@Url.Action("Index", "Product", new {area="ProductManage", id=123})</strong>
+</p>
+*@
+
+@*
+<p>
+    <strong>@Url.RouteUrl("default", new {action="HelloView", Controller="Home", id=123, name="MinhQuan"})</strong>
+</p>
+
+<p>
+    <strong>@Url.RouteUrl("neptune2")</strong>
+</p>
+*@
+
+<ul>
+    <li>asp-area="Area"</li>
+    <li>asp-action="Action"</li>
+    <li>asp-controller="Product"</li>
+    <li>asp-route-...="123"</li>
+    <li>asp-route="default"</li>
+</ul>
+
+@{
+    var routeData = new Dictionary<string, string>()
+    {
+        {"id", "12345"},
+        {"name", "QuanDo2"},
+        {"abc", "XYZ2"}
+    };
+}
+
+@*
+    asp-route-id="123"
+    asp-route-name="QuanDo"
+    asp-route-abc="XYZ"
+*@
+
+<a asp-action="Index" asp-controller="Home" asp-all-route-data="@routeData">
+    VI DU 1
+</a>

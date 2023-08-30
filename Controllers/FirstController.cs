@@ -136,6 +136,7 @@ namespace AppMvc.Net.Controllers
         [TempData]
         public string StatusMessage { get; set; }
 
+        [AcceptVerbs("POST", "Get")]
         public IActionResult ViewProduct(int? id)
         {
             var products = _productService.Where(p => p.Id == id).FirstOrDefault();
@@ -146,7 +147,6 @@ namespace AppMvc.Net.Controllers
                 return Redirect(Url.Action("Index", "Home"));
             }
 
-            
 
             // Razor engine se tim theo cach: /View/First/ViewProduct.cshtml
             // Neu ko thay thi tiep tuc tim o: /MyView/First/ViewProduct.cshtml

@@ -21,4 +21,34 @@ options.ViewLocationFormats.Add("/MyView/{1}/{0}" + RazorViewEngine.ViewExtensio
 - ViewBag
 - TempData
 
+## Areas
+- Là tên dùng để routing
+- Là cấu trúc thư mục chứa MVC
+- Thiết lập Area cho controller bằng ```[Area("AreaName")]```
+
+## Route
+- app.MapControllerRoute
+- app.MapAreaControllerRoute
+- [AcceptVerbs("POST", "Get")]
+- [Route("pattern")]
+- [HttpGet] [HttpPost]
+
+## Url Generation
+### UrlHelper : Action, ActionLink, RouteUrl, Link
+```
+Url.Action("PlaneInfo", "Planet", new {id = 3}, Context.Request.Scheme)
+
+Url.RouteUrl("default", new {action="HelloView", Controller="Home", id=123, name="MinhQuan"})
+```
+### HtmlTagHelper: <a> <button> <form>
+Sử dụng thuộc tính:
+```
+asp-area="Area"
+asp-action="Action"
+asp-controller="Product"
+asp-route-...="123"
+asp-route="default"
+```
+
+
 

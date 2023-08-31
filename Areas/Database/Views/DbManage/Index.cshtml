@@ -1,0 +1,60 @@
+﻿@using Microsoft.EntityFrameworkCore
+@using System.Data
+
+@inject AppDbContext dbContext
+
+@{
+    ViewData["Title"] = "Thong tin DB";
+    var message = TempData["StatusMessage"] as string;
+
+    var connect = dbContext.Database.GetDbConnection();
+    var dbName = connect.Database;
+    var can_connect = dbContext.Database.CanConnect();
+
+}
+
+<h2><strong>Thong tin</strong></h2>
+<p>- Database: @dbName</p>
+<p>- Source: @connect.DataSource</p>
+<p>- State: @connect.State</p>
+<hr />
+
+@await Html.PartialAsync("_AlertMessage", message)
+
+<h2><strong>Migration</strong></h2>
+@foreach (var migration in dbContext.Database.GetPendingMigrations())
+{
+    <p>- @migration <strong>(Pending)</strong></p>
+}
+
+@foreach (var migration in dbContext.Database.GetAppliedMigrations())
+{
+    <p>- @migration</p>
+}
+
+@if(!can_connect)
+{
+    <p class="alert alert-danger">Khong the ket noi den Database</p>
+}
+else
+{
+    <h2>Cac Table</h2>
+    await dbContext.Database.OpenConnectionAsync();
+    var table = dbContext.Database.GetDbConnection().GetSchema("Tables");
+
+    <ul>
+        @foreach (System.Data.DataRow row in table.Rows)
+        {
+            <li>@row["TABLE_NAME"]</li>
+        }
+    </ul>
+
+    <a class="btn btn-danger" asp-action="DeleteDb">Xoa Database: @dbName</a>
+}
+
+@if(dbContext.Database.GetPendingMigrations().Any())
+{
+    <form method="post">
+        <button class="btn btn-success" type="submit" asp-action="AddMigration">Add Migration</button>
+    </form>
+}

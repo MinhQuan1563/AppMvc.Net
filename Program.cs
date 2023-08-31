@@ -1,7 +1,9 @@
 using AppMvc.Net.ExtendMethods;
+using AppMvc.Net.Models;
 using AppMvc.Net.Services;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Routing.Constraints;
+using Microsoft.EntityFrameworkCore;
 using System.Net;
 
 namespace AppMvc.Net
@@ -37,6 +39,13 @@ namespace AppMvc.Net
             //services.AddSingleton(typeof(ProductService), typeof(ProductService));
 
             services.AddSingleton<PlanetService>();
+
+            // Database
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                var connectString = builder.Configuration.GetConnectionString("AppMvcConnectionString");
+                options.UseSqlServer(connectString);
+            });
 
             var app = builder.Build();
 

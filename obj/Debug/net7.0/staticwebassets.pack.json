@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\images\\email.png",
+      "PackagePath": "staticwebassets\\images\\email.png"
+    },
+    {
       "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

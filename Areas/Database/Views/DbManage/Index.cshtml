@@ -22,15 +22,22 @@
 @await Html.PartialAsync("_AlertMessage", message)
 
 <h2><strong>Migration</strong></h2>
+@foreach (var migration in dbContext.Database.GetAppliedMigrations())
+{
+    <p>- @migration</p>
+}
 @foreach (var migration in dbContext.Database.GetPendingMigrations())
 {
     <p>- @migration <strong>(Pending)</strong></p>
 }
 
-@foreach (var migration in dbContext.Database.GetAppliedMigrations())
+@if (dbContext.Database.GetPendingMigrations().Any())
 {
-    <p>- @migration</p>
+    <form method="post">
+        <button class="btn btn-success" type="submit" asp-action="AddMigration">Update Migration</button>
+    </form>
 }
+
 
 @if(!can_connect)
 {
@@ -50,11 +57,4 @@ else
     </ul>
 
     <a class="btn btn-danger" asp-action="DeleteDb">Xoa Database: @dbName</a>
-}
-
-@if(dbContext.Database.GetPendingMigrations().Any())
-{
-    <form method="post">
-        <button class="btn btn-success" type="submit" asp-action="AddMigration">Add Migration</button>
-    </form>
 }

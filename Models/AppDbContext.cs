@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AppMvc.Net.Models.Contact;
+using Microsoft.EntityFrameworkCore;
 
 namespace AppMvc.Net.Models
 {
     public class AppDbContext : DbContext
     {
+
         public AppDbContext(DbContextOptions options) : base(options)
         {
 
@@ -18,5 +20,6 @@ namespace AppMvc.Net.Models
         {
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<ContactModel> Contacts { get; set; }
     }
 }

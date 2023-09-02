@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ff0rhJY/p1wfu7k7EvG7CF10X1nu93EqQazHeFergyU=",
+  "Hash": "BE2BqsISuall6Tfdu8RhSyTjrbNgwTOWNMEPr+pkK28=",
   "Source": "AppMvc.Net",
   "BasePath": "_content/AppMvc.Net",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\css\\site.min.css",
+      "SourceId": "AppMvc.Net",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\",
+      "BasePath": "_content/AppMvc.Net",
+      "RelativePath": "css/site.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.min.css"
     },
     {
       "Identity": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\favicon.ico",

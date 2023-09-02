@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\css\\site.min.css",
+      "PackagePath": "staticwebassets\\css\\site.min.css"
+    },
+    {
       "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

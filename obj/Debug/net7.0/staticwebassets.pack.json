@@ -253,6 +253,34 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\lib\\multiple-select\\multiple-select.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.css"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\lib\\multiple-select\\multiple-select.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.js"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\lib\\multiple-select\\multiple-select.min.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.min.css"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\lib\\multiple-select\\multiple-select.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.min.css.map"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\lib\\multiple-select\\multiple-select.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.min.js"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\lib\\multiple-select\\multiple-select.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.min.js.map"
+    },
+    {
+      "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\lib\\multiple-select\\multiple-select.png",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.png"
+    },
+    {
       "Id": "D:\\MINHQUAN\\Workspace\\C#\\AppMvc.Net\\AppMvc.Net\\wwwroot\\planet\\Earth.jpg",
       "PackagePath": "staticwebassets\\planet\\Earth.jpg"
     },

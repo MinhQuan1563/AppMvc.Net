@@ -1,4 +1,5 @@
-﻿using AppMvc.Net.ExtendMethods;
+﻿using AppMvc.Net.Data;
+using AppMvc.Net.ExtendMethods;
 using AppMvc.Net.Models;
 using AppMvc.Net.Services;
 using Microsoft.AspNetCore.Identity;
@@ -40,6 +41,15 @@ namespace AppMvc.Net
             //services.AddSingleton(typeof(ProductService), typeof(ProductService));
 
             services.AddSingleton<PlanetService>();
+
+            // Dang ky dich vu Email
+            services.AddOptions();
+            var mailSetting = builder.Configuration.GetSection("MailSettings");
+            services.Configure<MailSettings>(mailSetting);
+            services.AddSingleton<IEmailSender, SendMailService>();
+
+            // Identity Error Describer
+            services.AddSingleton<IdentityErrorDescriber, AppIdentityErrorDescriber>();
 
             // Database
             services.AddDbContext<AppDbContext>(options =>
@@ -104,6 +114,15 @@ namespace AppMvc.Net
                         // https://localhost:7239/dang-nhap-tu-facebook
                         options.CallbackPath = "/dang-nhap-tu-facebook";
                     });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("ViewManageMenu", builder =>
+                {
+                    builder.RequireAuthenticatedUser();
+                    builder.RequireRole(RoleName.Administrator);
+                });
+            });
 
             var app = builder.Build();
 

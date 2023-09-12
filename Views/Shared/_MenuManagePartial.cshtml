@@ -11,7 +11,7 @@
         <a class="btn btn-outline-danger dropdown-toggle" href="#" data-bs-toggle="dropdown">
             Manage
         </a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu dropdown-menu-end">
             <a class="dropdown-item" asp-action="Index" asp-controller="DbManage" asp-area="Database">
                 Database
             </a>
@@ -23,6 +23,9 @@
             </a>
             <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Identity">
                 Quan ly User
+            </a>
+            <a class="dropdown-item" asp-action="Index" asp-controller="Category" asp-area="Blog">
+                Quan ly Blog
             </a>
         </div>
     </div>

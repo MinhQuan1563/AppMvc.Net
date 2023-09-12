@@ -1,4 +1,5 @@
-﻿using AppMvc.Net.Models.Contact;
+﻿using AppMvc.Net.Models.Blog;
+using AppMvc.Net.Models.Contact;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,7 +30,13 @@ namespace AppMvc.Net.Models
                     entityType.SetTableName(tableName.Substring(6));
                 }
             }
+
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.HasIndex(c => c.Slug);
+            });
         }
         public DbSet<ContactModel> Contacts { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

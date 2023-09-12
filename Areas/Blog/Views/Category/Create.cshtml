@@ -1,0 +1,91 @@
+﻿@model AppMvc.Net.Models.Blog.Category
+
+@{
+    ViewData["Title"] = "Create";
+    @*var items = new List<SelectListItem>();
+    items.Add(new SelectListItem()
+    {
+        Text = "Muc 1",
+        Value = "val-1"
+    });
+    items.Add(new SelectListItem()
+    {
+        Text = "Muc 2",
+        Value = "val-2",
+        Selected = true
+    });
+    items.Add(new SelectListItem()
+    {
+        Text = "Muc 3",
+        Value = "val-3",
+        Disabled = true
+    });*@
+    var data = new object[]
+            {
+                new
+                {
+                    ten = "Ten 1",
+                    giatri = 1
+                },
+                new
+                {
+                    ten = "Ten 2",
+                    giatri = 2
+                },
+                new
+                {
+                    ten = "Ten 3",
+                    giatri = 3
+                },
+                new
+                {
+                    ten = "Ten 4",
+                    giatri = 4
+                }
+            };
+    var items = new SelectList(data, "giatri", "ten", 3);
+}
+
+<select asp-items="items"></select>
+
+<h1>Create</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <input asp-for="Content" class="form-control" />
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Slug" class="control-label"></label>
+                <input asp-for="Slug" class="form-control" />
+                <span asp-validation-for="Slug" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentCategoryId" class="control-label"></label>
+                <select asp-for="ParentCategoryId" class ="form-control" asp-items="ViewBag.ParentCategoryId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
